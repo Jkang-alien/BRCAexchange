@@ -1,7 +1,7 @@
 ## Only run examples in interactive R sessions
 
 source("helpers.R")
-#BRCAexchange <- readRDS("BRCA/data/BRCAexchange.rds")
+BRCAexchange <- readRDS("data/BRCAexchange.rds")
 
 
 if (interactive()) {
@@ -20,22 +20,22 @@ if (interactive()) {
     )
     
     server <- function(input, output) {
+        
+        inFile <- reactive(input$file1)
+        
         output$content1 <- renderTable({
-            inFile <- input$file1
-            if (is.null(inFile))
+             if (is.null(inFile()))
                 return(NULL)
             
-            df_input <- make.df.from.input(inFile$datapath)
+            df_input <- make.df.from.input(inFile()$datapath)
             gene_info(df_input)
         })
         
         output$content2 <- renderTable({
-            inFile <- input$file1
-            
-            if (is.null(inFile))
+            if (is.null(inFile()))
                 return(NULL)
             
-            df_input <- make.df.from.input(inFile$datapath)
+            df_input <- make.df.from.input(inFile()$datapath)
             read_info(df_input)
         })
     }
