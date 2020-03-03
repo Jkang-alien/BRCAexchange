@@ -13,11 +13,23 @@ summary(data)
 
 df <- data$data
 
+df %>%
+  filter()
+
+saveRDS(df, file = "BRCAexchange.rds")
+
 # save(df, file = "df.RData")
 
 
-ir <- read_delim("M20-001146_v1_39100eae-d33f-46e7-b850-fc9545bf39da-2020-02-06-23-31-23-919.tsv",
-                 delim = "\t", skip = 15)
+ir <- make.df.from.input("M20-001146_v1_39100eae-d33f-46e7-b850-fc9545bf39da-2020-02-06-23-31-23-919.tsv")
+
+locus <- ir$Locus
+
+for (i in 1:length(locus)) {
+  ir %>%
+    filter(Locus == locus[i]) %>%
+    select(ir_HGVS_cDNA, `% Frequency`, Coverage, `Homopolymer Length`)
+}
 
 data_coding <- ir %>%
   select(Coding)
@@ -41,10 +53,7 @@ data_coding <- ir %>%
   select(ir_HGVS_cDNA)
 
 
-df %>%
-  filter()
 
-saveRDS(df, file = "BRCAexchange.rds")
 
 df.1 <- f.1("M20-001146_v1_39100eae-d33f-46e7-b850-fc9545bf39da-2020-02-06-23-31-23-919.tsv")
 df.2 <- f.2(df.1)
@@ -54,4 +63,3 @@ f.3(df.2)
 
 BRCAexchange <- readRDS("BRCA/data/BRCAexchange.rds")
 
-read_info(ir)

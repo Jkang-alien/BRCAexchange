@@ -1,0 +1,19 @@
+##analysisDate=2019-11-27-19-55-55-000
+##analyzedBy=molpath molpath
+##exportDate=2020-02-09-16-18-09-000
+##analysisName=M19-15617_v1_b723c590-fa69-4d0e-95c4-99ab66a02c8d
+##workflowName=CMC_PATH_8000_5.4_BRCA-Blist_BRCA1_Oncomine Comprehensive v1 - 540 - w2.2 - DNA and Fusions - Single Sample_be64a527-16f5-4709-ae94-f3902c047262_ea57eda2-adec-46aa-b865-87b07903679f
+##sampleNames=M19-15617_v1:M19-15617_RNA_v1
+##reference=hg19
+##variantGroup=DEFAULT
+##filterChain=Oncomine BRCA
+##searchText=
+##chromosome=All
+##totalVariantCount=2638
+##filterInCount=3
+##filteredOutCount=2635
+##hiddenVariantCount=0
+Locus	Genotype	Ref	Observed Allele	Type	No Call Reason	Genes	Location	Length	Oncomine Variant Class	Oncomine Gene Class	Copy Number	CytoBand	Info	Variant ID	Variant Name	% Frequency	Coverage	Filter	Amino Acid Change	Read Counts	Allele Ratio	CNV Confidence	Detection	3'/5' Imbalance	COSMIC/NCBI	Read Counts Per Million	Strand	Exon	Transcript	Coding	Variant Effect	PhyloP	SIFT	Grantham	PolyPhen	PFAM	dbSNP	DGV	MAF	EMAF	AMAF	GMAF	UCSC Common SNPs	ExAC LAF	ExAC EAAF	ExAC OAF	ExAC EFAF	ExAC SAAF	ExAC ENFAF	ExAC AAF	ExAC GAF	Gene Ontology	DrugBank	ClinVar	p-value	Phred QUAL Score	Allele Coverage	CNV Precision	Ref+/Ref-/Var+/Var-	Homopolymer Length	Tiles	Subset of
+chr13:32890534			<CNV>	CNV	.	BRCA2		82.388kb			1.57	13q13.1(32890534-32972922)x1.57143	HS	BRCA2				PASS				5%:1.45, 95%:1.7	Present															esv3306840,esv3329650,esv3426269,esv3580597,nsv1127324,nsv1145657,nsv475474,nsv819799,nsv832576																		100.0					135	
+chr13:32929042	C/G	C	G	SNV		BRCA2	BRCA2:exonic:NM_000059.3	1								43.81	1203	PASS	p.Ala2351Gly		C=0.5619, G=0.4381		Present				+	14	NM_000059.3	c.7052C>G	missense	-0.01	0.1	60.0	0.763	BRCA2 repeat	rs80358932		0.001					0.0 (pos.32929042)	1.735E-3 (pos.32929042)	1.101E-3 (pos.32929042)	0.0 (pos.32929042)	0.0 (pos.32929042)	0.0 (pos.32929042)	0.0 (pos.32929042)	1.323E-4 (pos.32929042)	BRCA2-MAGE-D1 complex,DNA damage response, signal transduction by p53 class mediator resulting in transcription of p21 class mediator,DNA synthesis involved in DNA repair,H3 histone acetyltransferase activity,H4 histone acetyltransferase activity,brain development,cell aging,centrosome,centrosome duplication,chromosome breakage,cytokinesis,cytoplasm,double-strand break repair,double-strand break repair via homologous recombination,establishment of protein localization to telomere,female gonad development,gamma-tubulin binding,hemopoiesis,histone H3 acetylation,histone H4 acetylation,histone acetyltransferase activity,homologous chromosome orientation involved in meiotic metaphase I plate congression,inner cell mass cell proliferation,intrinsic apoptotic signaling pathway in response to DNA damage by p53 class mediator,male meiosis I,mammary gland development,mitotic recombination-dependent replication fork processing,multicellular organism growth,negative regulation of mammary gland epithelial cell proliferation,nuclear chromosome, telomeric region,nucleoplasm,nucleotide-excision repair,nucleus,oocyte maturation,positive regulation of mitotic cell cycle,positive regulation of transcription, DNA-templated,protease binding,protein binding,protein complex,regulation of cytokinesis,replication fork protection,response to UV-C,response to X-ray,response to estradiol,response to gamma radiation,response to nutrient,secretory granule,single-stranded DNA binding,spermatogenesis,strand displacement,telomere maintenance via recombination		Likely benign,other	0.00001	3430.75	C=676, G=527		C=199/477, G=158/369	1		
+chr17:41197601			<CNV>	CNV	.	BRCA1		78.52kb			1.6	17q21.31(41197601-41276121)x1.6	HS	BRCA1				PASS				5%:1.45, 95%:1.76	Present															dgv3175n100,esv2667044,esv2672913,esv2715952,esv33998,esv3640620,nsv1058169,nsv1058376,nsv1059971,nsv1146669,nsv457743,nsv470587,nsv575053,nsv827999,nsv962327																		100.0					90	

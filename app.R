@@ -13,7 +13,7 @@ if (interactive()) {
                 tags$hr()
             ),
             mainPanel(
-                tableOutput("content1"),
+                tableOutput("1"),
                 tableOutput("content2")
             )
         )
@@ -22,21 +22,20 @@ if (interactive()) {
     server <- function(input, output) {
         
         inFile <- reactive(input$file1)
+        df_input <- reactive(make.df.from.input(inFile()$datapath))
+        locus <- reactive(df_input()$Locus)
         
-        output$content1 <- renderTable({
-             if (is.null(inFile()))
-                return(NULL)
-            
-            df_input <- make.df.from.input(inFile()$datapath)
-            gene_info(df_input)
+        lapply (1:1, function(i) {
+            output[[i]] <- renderTable({
+                read_info(df_input() %>%
+                              filter(Locus == locus()[i]))
+            })
         })
-        
+
         output$content2 <- renderTable({
             if (is.null(inFile()))
                 return(NULL)
-            
-            df_input <- make.df.from.input(inFile()$datapath)
-            read_info(df_input)
+            read_info(df_input())
         })
     }
     
